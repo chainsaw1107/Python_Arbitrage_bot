@@ -1,0 +1,144 @@
+# We loop over each of the values in the list of configs and create a deployment for each of them.
+# The deployment is created with the name of the chart and the config map is created with the name of the config map.
+
+# Path: charts/arbitrage/templates/deployment.yaml
+
+
+{{$base_values := .Values}}
+{{$labels := include "arbitrage.labels" .}}
+{{$fullname := include "arbitrage.fullname" . }}
+{{$selectorLabels := include "arbitrage.selectorLabels" . }}
+{{$serviceAccountName := include "arbitrage.serviceAccountName" . }}
+{{$concatonatedImage := printf "%s:%s" .Values.image.repository .Values.image.tag}}
+{{$configMapName := .Values.config.config_map_name}}
+{{$resources := .Values.resources}}
+{{$affinity := .Values.affinity}}
+{{$tolerations := .Values.tolerations}}
+{{$nodeSelector := .Values.nodeSelector}}
+{{$podAnnotations := .Values.podAnnotations}}
+{{$podSecurityContext := .Values.podSecurityContext}}
+{{$securityContext := .Values.securityContext}}
+{{$imagePullSecrets := .Values.imagePullSecrets}}
+{{$imagePullPolicy := .Values.image.pullPolicy}}
+{{$env := .Values.config.env}}
+{{$backlistKeyWords := .Values.config.blacklist_keywords}}
+
+
+{{range .Values.config.config_paths}}
+
+{{$configPath :=. }}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{$configPath}}
+  labels:
+    {{- $labels | nindent 4 }}
+    app.kubernetes.io/instance: {{ $configPath }}
+spec:
+  selector:
+    matchLabels:
+      {{- $selectorLabels | nindent 6 }}
+      app.kubernetes.io/instance: {{ $configPath }}
+  template:
+    metadata:
+      {{- with $podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- $selectorLabels | nindent 8 }}
+        app.kubernetes.io/instance: {{ $configPath }}
+    spec:
+      {{- with $imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ $serviceAccountName }}
+      securityContext:
+        {{- toYaml $securityContext| nindent 8 }}
+      containers:
+        - name: arber
+          image: {{$concatonatedImage}}
+          imagePullPolicy: {{$imagePullPolicy}}
+          envFrom:
+            - configMapRef:
+                name: {{$configMapName}}
+          env:
+          {{- range $key, $val := $env}}
+            - name: {{ $key }}
+              value: "{{ $val }}"
+          {{- end }}
+            - name: JOB_NAME
+              value: "{{$configPath}}"
+            - name: CONFIG_FILE
+              value: "configs/generated/{{$configPath}}"
+          resources:
+            {{- toYaml $resources | nindent 12 }}
+
+      volumes:
+        - name: ethereum-private-key
+          configMap:
+            name: arb-configs
+            items:
+              - key: ETH_KEY
+                path: ethereum_private_key.txt
+      initContainers:
+        - name: check-approvals
+          image: {{$concatonatedImage}}
+          command: ["/bin/bash",]
+          args: ["-c", "echo ok"]
+          # args: ["approvals", "--config-file", "configs/generated/{{$configPath}}", "--amount", "88888888888888888888888888888"]
+          imagePullPolicy: {{$imagePullPolicy}}
+          envFrom:
+            - configMapRef:
+                name: {{$configMapName}}
+          env:
+          {{- range $key, $val := $env}}
+            - name: {{ $key }}
+              value: "{{ $val }}"
+          {{- end }}
+            - name: CONFIG_FILE
+              value: "configs/generated/{{$configPath}}"
+
+          # we mount in a file called app/ethereum_private_key.txt this is from the secret
+
+          volumeMounts:
+            - name: ethereum-private-key
+              mountPath: /app/ethereum_private_key.txt
+              subPath: ethereum_private_key.txt
+
+          resources:
+            {{- toYaml $resources | nindent 12 }}
+
+
+
+      {{- with $nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+---
+{{end}}
+
+{{if not .Values.config.from_existing_config_map}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.config.config_map_name}}
+  labels:
+    {{- include "arbitrage.labels" . | nindent 4 }}
+data:
+{{- range $key, $val := .Values.config.env}}
+  {{ $key }}: {{ $val }}
+{{- end }}
+{{- end }}
+
+# we have a cronjob to be run

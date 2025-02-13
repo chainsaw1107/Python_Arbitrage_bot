@@ -1,0 +1,33 @@
+# docker run  -v (pwd):/app -it test
+# we make a volume with the current directory and mount it to /app
+
+version: '3'
+services:
+  olas-eth-xdai:
+    profiles: [olas]
+    build: .
+    volumes:
+      - .:/app
+
+  olas-matic-polygon:
+    profiles: [olas]
+    build: .
+    volumes:
+      - .:/app
+    command: run_polygon
+
+
+  reporting:
+    profiles: [olas]
+    build: .
+    volumes:
+      - .:/app
+    command: run_report_gsheet
+
+
+  reporting_slack:
+    profiles: [gno]
+    build: .
+    volumes:
+      - .:/app
+    command: run_report_slack

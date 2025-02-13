@@ -1,0 +1,27 @@
+{
+    "exchange_1": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "base",
+        "rpc_url": "https://rpc.ankr.com/base",
+        "block_explorer_url": "https://basescan.org/",
+        "native_token_symbol": "ETH",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0x54330d28ca3357F294334BDC454a032e7f353416",
+        "token_b": "0x4200000000000000000000000000000000000006",
+        "gas_price": 2.4
+    },
+    "exchange_2": {
+        "chain_name": "arbitrum",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "http://arbi.chains.wtf:8547",
+        "block_explorer_url": "https://arbiscan.io/",
+        "native_token_symbol": "AETH",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0x064f8b858c2a603e1b106a2039f5446d32dc81c1",
+        "token_b": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "pool_id": "0xaf8912a3c4f55a8584b67df30ee0ddf0e60e01f80002000000000000000004fc",
+        "chain_id": 42161,
+        "gas_price": 2.8
+    }
+}

@@ -1,0 +1,7 @@
+# solana_private_key.txt
+.vscode
+__pycache__
+.pytest_cache
+*.pyc
+Pipfile
+Pipfile.lock

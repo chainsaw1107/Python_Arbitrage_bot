@@ -1,0 +1,55 @@
+config:
+  env:
+    LOG_LEVEL: "CRITICAL"
+    ETHERSCAN_API_KEY: None
+    ZERION_API_KEY: None
+    ENVIROMENT: "prod"
+    MIN_PROFIT: "0.01"
+    ASYNC_EXECUTION: "true"
+    EXECUTION_AMOUNT_TOKEN_A: "250"
+    EXECUTION_INTERVAL: "9"
+  config_paths:
+    - arbitrum-olas-dai-ethereum-olas-dai
+    - arbitrum-olas-usdc-ethereum-olas-dai
+    - arbitrum-olas-usdc-ethereum-olas-usdc
+    - arbitrum-olas-usdc-ethereum-olas-usdt
+    - arbitrum-olas-usdt-ethereum-olas-dai
+    - arbitrum-olas-usdt-ethereum-olas-usdt
+    - arbitrum-olas-wbtc-ethereum-olas-wbtc
+    - arbitrum-olas-weth-ethereum-olas-weth
+    - base-olas-dai-ethereum-olas-dai
+    - base-olas-usdc-ethereum-olas-dai
+    - base-olas-usdc-ethereum-olas-usdc
+    - base-olas-usdc-ethereum-olas-usdt
+    - base-olas-usdt-ethereum-olas-dai
+    - base-olas-usdt-ethereum-olas-usdt
+    - base-olas-weth-ethereum-olas-weth
+    - ethereum-olas-dai-gnosis-olas-wxdai
+    - ethereum-olas-usdc-gnosis-olas-wxdai
+    - ethereum-olas-usdt-gnosis-olas-wxdai
+    - gnosis-olas-usdc-ethereum-olas-dai
+    - gnosis-olas-usdc-ethereum-olas-usdc
+    - gnosis-olas-usdc-ethereum-olas-usdt
+    - gnosis-olas-usdt-ethereum-olas-dai
+    - gnosis-olas-usdt-ethereum-olas-usdt
+    - gnosis-olas-wbtc-ethereum-olas-wbtc
+    - gnosis-olas-weth-ethereum-olas-weth
+    - optimism-olas-dai-ethereum-olas-dai
+    - optimism-olas-usdc-ethereum-olas-dai
+    - optimism-olas-usdc-ethereum-olas-usdc
+    - optimism-olas-usdc-ethereum-olas-usdt
+    - optimism-olas-usdt-ethereum-olas-dai
+    - optimism-olas-usdt-ethereum-olas-usdt
+    - optimism-olas-wbtc-ethereum-olas-wbtc
+    - optimism-olas-weth-ethereum-olas-weth
+    - polygon-olas-dai-ethereum-olas-dai
+    - polygon-olas-usdc-ethereum-olas-dai
+    - polygon-olas-usdc-ethereum-olas-usdc
+    - polygon-olas-usdc-ethereum-olas-usdt
+    - polygon-olas-usdt-ethereum-olas-dai
+    - polygon-olas-usdt-ethereum-olas-usdt
+    - polygon-olas-wbtc-ethereum-olas-wbtc
+    - polygon-olas-weth-ethereum-olas-weth
+
+reporting:
+  enabled: false

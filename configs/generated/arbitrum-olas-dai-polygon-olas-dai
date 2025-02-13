@@ -1,0 +1,28 @@
+{
+    "exchange_1": {
+        "chain_name": "arbitrum",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://sly-special-tent.arbitrum-mainnet.quiknode.pro/aa465b0cd78549ec017e0368656a4b1a0087cc7a",
+        "block_explorer_url": "https://arbiscan.io/",
+        "chain_id": 42161,
+        "native_token_symbol": "ETH",
+        "token_a": "0x064F8B858C2A603e1b106a2039f5446D32dc81c1",
+        "token_b": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    },
+    "exchange_2": {
+        "chain_name": "polygon",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://rpc.ankr.com/polygon",
+        "block_explorer_url": "https://polygonscan.com/",
+        "chain_id": 137,
+        "native_token_symbol": "MATIC",
+        "token_a": "0xFEF5d947472e72Efbb2E388c730B7428406F2F95",
+        "token_b": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    }
+}

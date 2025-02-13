@@ -1,0 +1,29 @@
+{
+    "network": "goerli",
+    "batchSwap":{
+      "kind": "0", 
+      "assets": [ 
+        "0xdfcea9088c8a88a76ff74892c1457c17dfeef9c1",
+        "0xe0c9275e44ea80ef17579d33c55136b7da269aeb"
+      ],
+      "limits": [ 
+        0.001,
+        0
+      ],
+      "swaps": [
+        {
+          "poolId": "0x9f1f16b025f703ee985b58ced48daf93dad2f7ef000200000000000000000063",
+          "assetInIndex": 0,
+          "assetOutIndex": 1,
+          "amount": 0.001
+        }
+      ],
+      "funds": {
+        "sender": "0x975EefE53305c0c5480aeC00cea22e8b36250C05",
+        "recipient": "0x975EefE53305c0c5480aeC00cea22e8b36250C05",
+        "fromInternalBalance": false,
+        "toInternalBalance": false
+      },
+      "deadline": "999999999999999999"
+    }
+}

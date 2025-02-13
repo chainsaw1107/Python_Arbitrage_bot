@@ -1,0 +1,28 @@
+{
+    "exchange_1": {
+        "chain_name": "gnosis",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "http://gnosis.chains.wtf:8545",
+        "block_explorer_url": "https://blockscout.com/xdai/mainnet/",
+        "chain_id": 100,
+        "native_token_symbol": "XDAI",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    },
+    "exchange_2": {
+        "chain_name": "ethereum",
+        "exchange_type": "uniswap_router",
+        "rpc_url": "http://eth.chains.wtf:8545",
+        "block_explorer_url": "https://etherscan.io/",
+        "chain_id": 1,
+        "native_token_symbol": "ETH",
+        "token_a": "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
+        "token_b": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "router_address": "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD",
+        "permit2_address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "vault_address": null
+    }
+}

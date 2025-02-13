@@ -1,0 +1,32 @@
+__pycache__
+.DS_Store
+
+# build
+dist
+
+# jupyter
+.ipynb_checkpoints
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+.idea
+.python-version
+
+# docs
+docs/build
+docs/source/**/_autosummary*
+
+# Some read-uniswap-v2-pairs.py dynamic files
+uni-v2-last-block-state.txt
+
+*.csv
+
+# Ignore Aave v3 authentication file
+docs/source/tutorials/aave.json
+
+# hardhat export
+contracts/aave-v3-deploy/hardhat-deployment-export.json
+
+# pyenv local
+.python-version

@@ -1,0 +1,28 @@
+{
+    "exchange_1": {
+        "chain_name": "gnosis",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "http://gnosis.chains.wtf:8545",
+        "block_explorer_url": "https://blockscout.com/xdai/mainnet/",
+        "chain_id": 100,
+        "native_token_symbol": "XDAI",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    },
+    "exchange_2": {
+        "chain_name": "optimism",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://lb.nodies.app/v1/8240365311df4c6d988304692f63b2dd",
+        "block_explorer_url": "https://optimistic.etherscan.io/",
+        "chain_id": 10,
+        "native_token_symbol": "ETH",
+        "token_a": "0xFC2E6e6BCbd49ccf3A5f029c79984372DcBFE527",
+        "token_b": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    }
+}

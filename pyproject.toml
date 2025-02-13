@@ -1,0 +1,53 @@
+[project]
+name = "olas-arbitrage"
+version = "0.2.58"
+description = ""
+authors = [
+    {name = "8baller",email = "8ball030@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+rich-click = "^1.6.1"
+web3 = "~6"
+balpy = {path = "third_party/balpy"}
+multicaller = {path = "third_party/multicaller"}
+balancerv2cad = {path = "third_party/balpy/balpy/balancerv2cad"}
+web3-ethereum-defi = {path = "third_party/open-web3-ethereum-defi", extras = ["all"]}
+eth-abi = "^4.2.1"
+eth-utils = "^2.2.1"
+python-dotenv = ">=0.14.0,<0.18.0"
+click = "^8.1.7"
+pygsheets = "^2.0.6"
+schedule = "^1.2.1"
+uniswap-smart-path = "^0.2"
+open-aea = "^1.43.0.post2"
+open-aea-ledger-solana = "^1.43.0.post2"
+uniswap-universal-router-decoder = "^1.0.1"
+docker = "^7.0.0"
+pytest-asyncio = "0.21.0"
+sqlalchemy = "^2.0.30"
+psycopg2-binary = "^2.9.9"
+langchain-community = "^0.0.38"
+langchain = "^0.1.20"
+langchain-openai = "^0.1.7"
+pandas = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.2.1"
+black = "^23.11.0"
+isort = "^5.12.0"
+pylama = {extras = ["all"], version = "^8.4.1"}
+tbump = "^6.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+arb = "olas_arbitrage.cli:cli"

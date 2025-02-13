@@ -1,0 +1,28 @@
+{
+    "exchange_1": {
+        "chain_name": "arbitrum",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://sly-special-tent.arbitrum-mainnet.quiknode.pro/aa465b0cd78549ec017e0368656a4b1a0087cc7a",
+        "block_explorer_url": "https://arbiscan.io/",
+        "chain_id": 42161,
+        "native_token_symbol": "ETH",
+        "token_a": "0x064F8B858C2A603e1b106a2039f5446D32dc81c1",
+        "token_b": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    },
+    "exchange_2": {
+        "chain_name": "gnosis",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://rpc.ankr.com/gnosis",
+        "block_explorer_url": "https://blockscout.com/xdai/mainnet/",
+        "chain_id": 100,
+        "native_token_symbol": "XDAI",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    }
+}

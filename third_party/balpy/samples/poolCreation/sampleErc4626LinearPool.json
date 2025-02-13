@@ -1,0 +1,37 @@
+{
+    /*
+    It is highly recommended that you make a copy of this file before running the script!
+    Once you run the script with a given file, these comments will disappear since to the
+    file will be saved with the poolId encoded in it. The pool generation script can handle
+    reading json files with comments in them, but it cannot recreate them.
+    */
+
+    // Network and Gas Settings
+    "network": "sepolia",
+    "gasSpeed": "average", // this can be {slow, average, fast}
+    "gasPriceOverride": "", // setting this to any number will override the gasSpeed
+
+    // Pool Name & Token Symbol
+    "name": "Python Test ERC4626 Linear Pool",
+    "symbol": "bb-4626-TOKEN",
+
+    // Pool Configuration
+    "poolType": "ERC4626LinearPool",
+    "swapFeePercent": "0.0005",
+    "fromInternalBalance": false,
+    "owner": "0x0000000000000000000000000000000000000000",
+    "upperTarget": "2100000000000000000000000",
+    "protocolId": "0", // Set Protocol ID according to the ID in ProtocolIdRegistry (e.g.: https://etherscan.io/address/0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68)
+    "tokens": {
+        "0xe5118e47e061ab15ca972d045b35193f673bcc36": {
+            "isWrappedToken": false,
+            "initialBalance": "1",
+            "allowance": -1
+        },
+        "0x2498A2B0d6462d2260EAC50aE1C3e03F4829BA95": {
+            "isWrappedToken": true,
+            "initialBalance": "0",
+            "allowance": -1
+        }
+    }
+}

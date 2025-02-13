@@ -1,0 +1,13 @@
+[profile.default]
+# solc is a hard mistress and simply refuses to compile relative paths down in the parent tree
+# allow the file system root and hope solc shuts up, as the error is not relevant
+allow_paths = ["*", "/"]
+
+# For VaultUSDCPaymentForwarder.sol
+solc_version = "0.6.12"
+
+# auto_detect_solc = true
+
+[profile.ci.fuzz]
+runs = 10_000
+

@@ -1,0 +1,33 @@
+.nboutput .rendered_html thead tr,
+.nboutput .rendered_html tbody tr:nth-child(even) {
+    background: #fff;
+}
+
+.nboutput .rendered_html tbody tr:hover {
+    background: #ADD8E6;
+}
+
+/* Increase sidebar with, so our long module names do not get chopped up */
+.sidebar-container {
+    width: 20em;
+}
+
+/* Fix next and previous nav at the bottom of the page */
+.related-pages {
+    display: none;
+}
+
+.bottom-of-page .left-details {
+}
+
+.footer-text,
+.footer-icons {
+    text-align: left;
+}
+
+.footer-icons svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}

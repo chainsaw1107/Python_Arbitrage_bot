@@ -1,0 +1,28 @@
+{
+    "exchange_1": {
+        "chain_name": "polygon",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "https://lb.nodies.app/v1/ed47ccb3c5c4464d8eb445e6c7cd82d7",
+        "block_explorer_url": "https://polygonscan.com/",
+        "chain_id": 137,
+        "native_token_symbol": "MATIC",
+        "token_a": "0xFEF5d947472e72Efbb2E388c730B7428406F2F95",
+        "token_b": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    },
+    "exchange_2": {
+        "chain_name": "gnosis",
+        "exchange_type": "balancer_optimised",
+        "rpc_url": "http://gnosis.chains.wtf:8545",
+        "block_explorer_url": "https://blockscout.com/xdai/mainnet/",
+        "chain_id": 100,
+        "native_token_symbol": "XDAI",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        "router_address": null,
+        "permit2_address": null,
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+    }
+}

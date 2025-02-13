@@ -1,0 +1,29 @@
+{
+    "exchange_1": {
+        "chain_name": "solana",
+        "exchange_type": "jupitar",
+        "rpc_url": "https://stylish-radial-uranium.solana-mainnet.quiknode.pro/1a3f50a366060ff50cd38e73a92723878a3c98ee/",
+        "block_explorer_url": "https://solana.fm",
+        "native_token_symbol": "SOL",
+        "token_a": {
+            "address": "Ez3nzG9ofodYCvEmw73XhQ87LWNYVRM2s7diB5tBZPyM",
+            "symbol": "OLAS"
+        },
+        "token_b": {
+            "address": "So11111111111111111111111111111111111111112",
+            "symbol": "SOL"
+        }
+    },
+    "exchange_2": {
+        "chain_name": "ethereum",
+        "exchange_type": "uniswap_router",
+        "chain_id": 1,
+        "rpc_url": "https://lb.nodies.app/v1/7606abc07b684b5a8a99e4ee99b24520",
+        "block_explorer_url": "https://etherscan.io",
+        "native_token_symbol": "ETH",
+        "token_a": "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
+        "token_b": "0xD31a59c85aE9D8edEFeC411D448f90841571b89c",
+        "router_address": "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD",
+        "permit2_address": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+    }
+}

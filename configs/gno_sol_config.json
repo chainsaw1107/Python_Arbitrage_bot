@@ -1,0 +1,30 @@
+{
+    "exchange_1": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "gnosis",
+        "rpc_url": "http://gnosis.chains.wtf:8545",
+        "block_explorer_url": "https://gnosisscan.io",
+        "native_token_symbol": "XDAI",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        "pool_id": "0x79c872ed3acb3fc5770dd8a0cd9cd5db3b3ac985000200000000000000000067"
+    },
+    "exchange_2": {
+        "chain_name": "solana",
+        "exchange_type": "jupitar",
+        "rpc_url": "https://stylish-radial-uranium.solana-mainnet.quiknode.pro/1a3f50a366060ff50cd38e73a92723878a3c98ee/",
+        "block_explorer_url": "https://solana.fm",
+        "native_token_symbol": "SOL",
+        "token_a": {
+            "address": "Ez3nzG9ofodYCvEmw73XhQ87LWNYVRM2s7diB5tBZPyM",
+            "symbol": "OLAS"
+        },
+        "token_b": {
+            "address": "EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o",
+            "symbol": "DAI"
+        }
+
+    }
+}

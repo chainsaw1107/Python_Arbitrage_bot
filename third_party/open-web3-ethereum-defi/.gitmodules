@@ -1,0 +1,43 @@
+[submodule "sushiswap"]
+	path = contracts/sushiswap
+	url = https://github.com/tradingstrategy-ai/sushiswap.git
+[submodule "uniswap-v3-core"]
+	path = contracts/uniswap-v3-core
+	url = https://github.com/Uniswap/v3-core.git
+[submodule "uniswap-v3-periphery"]
+	path = contracts/uniswap-v3-periphery
+	url = https://github.com/Uniswap/v3-periphery.git
+[submodule "contracts/enzyme"]
+	path = contracts/enzyme
+	url = https://github.com/enzymefinance/protocol.git
+    ignore = dirty
+[submodule "contracts/dhedge"]
+	path = contracts/dhedge
+	url = https://github.com/dhedge/V2-Public.git
+[submodule "contracts/in-house/lib/openzeppelin-contracts"]
+	path = contracts/in-house/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts.git
+[submodule "contracts/aave-v3-deploy"]
+	path = contracts/aave-v3-deploy
+	url = https://github.com/tradingstrategy-ai/aave-v3-deploy.git
+[submodule "contracts/centre"]
+	path = contracts/centre
+	url = https://github.com/centrehq/centre-tokens.git
+[submodule "contracts/1delta"]
+	path = contracts/1delta
+	url = https://github.com/1delta-DAO/contracts-delegation.git
+[submodule "contracts/guard/lib/forge-std"]
+	path = contracts/guard/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "contracts/guard/lib/openzeppelin-contracts"]
+	path = contracts/guard/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "contracts/terms-of-service"]
+	path = contracts/terms-of-service
+	url = https://github.com/tradingstrategy-ai/terms-of-service.git
+[submodule "contracts/velvet"]
+	path = contracts/velvet
+	url = https://github.com/Velvet-Capital/protocol-v2-public.git
+[submodule "contracts/aave-v2"]
+	path = contracts/aave-v2
+	url = https://github.com/aave/protocol-v2.git

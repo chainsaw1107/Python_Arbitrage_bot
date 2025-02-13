@@ -1,0 +1,26 @@
+{
+    "exchange_1": {
+        "chain_name": "polygon",
+        "exchange_type": "balancer_optimised",
+        "chain_id": 137,
+        "rpc_url": "https://polygon-rpc.com",
+        "block_explorer_url": "https://polygonscan.com/",
+        "native_token_symbol": "MATIC",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0xFEF5d947472e72Efbb2E388c730B7428406F2F95",
+        "token_b": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+        "gas_price": 200
+
+    },
+    "exchange_2": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "gnosis",
+        "rpc_url": "https://lb.nodies.app/v1/91c9d7176d2543fc8037620721f9de2b",
+        "block_explorer_url": "https://gnosisscan.io",
+        "native_token_symbol": "XDAI",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1"
+    }
+}

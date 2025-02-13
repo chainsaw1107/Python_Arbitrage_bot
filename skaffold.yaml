@@ -1,0 +1,25 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+metadata:
+  name: olas-arbitrage
+build:
+  tagPolicy:
+    envTemplate:
+      template:  "0.2.58"
+  artifacts:
+    - image: 8ball030/olas-arbitrage
+      docker:
+        dockerfile: Dockerfile
+  local:
+    concurrency: 1
+    tryImportMissing: false
+    useDockerCLI: false
+    useBuildkit: true
+deploy:
+  helm:
+    releases:
+      - name: arbitrage
+        chartPath: charts/arbitrage
+        valuesFiles:
+          - charts/arbitrage/values.yaml
+            # - private_config/gnosis-config.yaml

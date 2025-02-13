@@ -1,0 +1,26 @@
+{
+    "exchange_1": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "base",
+        "rpc_url": "https://rpc.ankr.com/base",
+        "block_explorer_url": "https://basescan.org/",
+        "native_token_symbol": "ETH",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0x4200000000000000000000000000000000000006",
+        "token_b": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "gas_price": 2
+    },
+    "exchange_2": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "base",
+        "rpc_url": "https://rpc.ankr.com/base",
+        "block_explorer_url": "https://basescan.org/",
+        "native_token_symbol": "ETH",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0x4200000000000000000000000000000000000006",
+        "token_b": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
+        "gas_price": 2
+    }
+}

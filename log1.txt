@@ -1,0 +1,414 @@
+STARTING ARBITRAGE BOT
+*************************
+STARTING ARBITRAGE BOT
+*************************
+Initialized logger
+STARTING ARBITRAGE BOT
+*************************
+Loading config from configs/agnt_usd_sol_base.json
+Checking for arbitrage opportunities
+Executing buys: True
+Executing sells: True
+Initialized strategy.
+        Self Address: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Exchange 1: Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Exchange 2: Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Min Profit: 0.01
+        Execution Interval: 1
+        Execution Amount Token A: 0.5
+        Trading Address 1: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Trading Address 2: 7pgGEs1ozaPVxFgyo3oFvxzpKPf5kGEEwd9knM5X1X1M
+        Buy Bias: 0.0
+        Sell Bias: 0.0
+Running strategy
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.5
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        output:
+                            Amount: 0.419203
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        Rate: 0.838406
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.5
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        output:
+                            Amount: 0.4321
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        Rate: 1.1571
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.4320999999999999285904550561
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        output:
+                            Amount: 0.510050366111630216
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        Rate: 1.180402
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.4320999999999999285904550561
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        output:
+                            Amount: 0.49749677
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        Rate: 0.8685
+Bid Rates: {'base': Decimal('0.83840599999999998459543348872102797031402587890625'), 'solana': Decimal('0.864199999999999857180910112219862639904022216796875')}
+Ask Rates: {'base': Decimal('0.8471692772110083512554263785'), 'solana': Decimal('0.8685483525852840311027206317')}
+Best Bid: 0.864199999999999857180910112219862639904022216796875 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Best Ask: 0.8471692772110083512554263785 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Profit: 2.01031%
+Delta is 2.01031%
+Exchange: base
+                AGENT Balance: 250
+                USDC Balance: 250
+                Native Balance: 0.0055
+Exchange: solana
+                AGENT Balance: 250.0
+                USDC Balance: 250.0
+                Native Balance: 0.100001
+Profit 0.02010309302653049989066243421 is greater than min profit! Executing trade sell 0.5 @ 0.864199999999999857180910112219862639904022216796875 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) and buy on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) @ 0.8471692772110083512554263785 with 0.4706265512330273 USDC
+USDC balance 250 on base is available.
+AGENT balance 250.0 on solana is available.
+Exchange: base
+                AGENT Balance: 250
+                USDC Balance: 250
+                Native Balance: 0.0055
+Exchange: solana
+                AGENT Balance: 250.0
+                USDC Balance: 250.0
+                Native Balance: 0.100001
+Exchange: base
+                AGENT Balance: 250
+                USDC Balance: 250
+                Native Balance: 0.0055
+Exchange: solana
+                AGENT Balance: 250.0
+                USDC Balance: 250.0
+                Native Balance: 0.100001
+Running strategy
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.5
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        output:
+                            Amount: 0.419163
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        Rate: 0.838326
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.5
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        output:
+                            Amount: 0.4321
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        Rate: 1.1571
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.4320999999999999285904550561
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        output:
+                            Amount: 0.510059283325638747
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        Rate: 1.180422
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.4320999999999999285904550561
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        output:
+                            Amount: 0.49749677
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        Rate: 0.8685
+Bid Rates: {'base': Decimal('0.83832600000000001561062390464940108358860015869140625'), 'solana': Decimal('0.864199999999999857180910112219862639904022216796875')}
+Ask Rates: {'base': Decimal('0.8471544664037291358496832720'), 'solana': Decimal('0.8685483525852840311027206317')}
+Best Bid: 0.864199999999999857180910112219862639904022216796875 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Best Ask: 0.8471544664037291358496832720 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Profit: 2.01209%
+Exchange: base
+                AGENT Balance: 250
+                USDC Balance: 250
+                Native Balance: 0.0055
+Exchange: solana
+                AGENT Balance: 250.0
+                USDC Balance: 250.0
+                Native Balance: 0.100001
+Profit 0.02012092749582142515771701617 is greater than min profit! Executing trade sell 0.5 @ 0.864199999999999857180910112219862639904022216796875 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) and buy on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) @ 0.8471544664037291358496832720 with 0.4706224782610255 USDC
+USDC balance 250 on base is available.
+AGENT balance 250.0 on solana is available.
+Selling on solana
+Buying on 0.43 base
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/2tToaxF85Xd852iP3p7UgaJTdDex5gSANNQ4dkj5A8KmqA9rZ4KfAbJge7fw3Git8nT82yTuD1PoHZ6wQKZcRS3c
+base - Transaction hash of submitted tx: 0x362aea8c52ed684bd822cb343d0ed0c1d13178352a8a88131ed1f5e6c4e5f7a0
+base - Block explorer url: https://basescan.org/tx/0x362aea8c52ed684bd822cb343d0ed0c1d13178352a8a88131ed1f5e6c4e5f7a0
+base - Transaction hash: 0x362aea8c52ed684bd822cb343d0ed0c1d13178352a8a88131ed1f5e6c4e5f7a0
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0x362aea8c52ed684bd822cb343d0ed0c1d13178352a8a88131ed1f5e6c4e5f7a0
+base - Transaction successful!
+base - Transaction hash of submitted tx: 0x917fef33b23e2bdee7a0ac19bb9981255065e33f47bc877b7775b7139909474d
+base - Block explorer url: https://basescan.org/tx/0x917fef33b23e2bdee7a0ac19bb9981255065e33f47bc877b7775b7139909474d
+base - Transaction hash: 0x917fef33b23e2bdee7a0ac19bb9981255065e33f47bc877b7775b7139909474d
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0x917fef33b23e2bdee7a0ac19bb9981255065e33f47bc877b7775b7139909474d
+base - Transaction successful!
+base - Sending transaction {'from': '0x2066cc1D135A90362693B51D953522e61Ec7681e', 'to': '0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD', 'nonce': 2, 'gas': 1000000, 'gasPrice': 13236840, 'chainId': 8453, 'data': '0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000007239f22f00000000000000000000000000000000000000000000000000000000000000020a080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001c00000000000000000000000000000000000000000000000000000000000000160000000000000000000000000833589fcd6edb6e08f4c7c32d4f71b54bda029130000000000000000000000007fffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006a96612f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000003fc91a3afd70395cd496c647d5a6cc9d4b2b7fad00000000000000000000000000000000000000000000000000000000677fa37f00000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000041d277442a748683472331dbcc2f6383215093be6f130ed45f2189ecc672ca781d69a70089553bcbb50b9e72bb2b6a25d3a51090ac776b0e8f8240f3348430cb7f1c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000006873e00000000000000000000000000000000000000000000000006a8839481826f0000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003000000000000000000000000833589fcd6edb6e08f4c7c32d4f71b54bda029130000000000000000000000004200000000000000000000000000000000000006000000000000000000000000d98832e8a59156acbee4744b9a94a9989a728f36'}
+base - Transaction hash of submitted tx: 0x4754d61c7c86d583ad24a92f3bb405e02d05bc3d2d2e9e6c1c0d1e8b7708eeaa
+base - Block explorer url: https://basescan.org/tx/0x4754d61c7c86d583ad24a92f3bb405e02d05bc3d2d2e9e6c1c0d1e8b7708eeaa
+base - Transaction hash: 0x4754d61c7c86d583ad24a92f3bb405e02d05bc3d2d2e9e6c1c0d1e8b7708eeaa
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0x4754d61c7c86d583ad24a92f3bb405e02d05bc3d2d2e9e6c1c0d1e8b7708eeaa
+base - Transaction successful!
+Transaction hash: 0x4754d61c7c86d583ad24a92f3bb405e02d05bc3d2d2e9e6c1c0d1e8b7708eeaa
+Transaction not settled. Retrying 99
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/4KDWbGeWLhQE6reMSemL8RZnrvUXb3ifadMqH93onjDoSdxs6SFUViCguLKq22ixay81haMJ98Sjg2u2CTG8z3mL
+Transaction not settled. Retrying 98
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/3tXiYsS7ujrbuaTMEzbEPPNCU6t7Pm9neeiWXc89yfsbjBz2k9C9X9McdudyVfA2xVLcPmRm5jeAWqz1dVDfZy6k
+Transaction not settled. Retrying 97
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/3hkAEuNFiADcvsZkYekEYCXwSjhmVSbvA8zvyRSdB4YdLLzXNc6q2xX3RS2LC5jyPqWvRVKfkSe98KvFRCjRF1dq
+Transaction not settled. Retrying 96
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/mAyGYcnq9JcodzrcL7s6ayVg1sLU5XSVR9xXUZh9Q77GzNs6tUMd9J6YxLxWqHD8F9Np3eVmyXMLBCEzjvFafaM
+Transaction not settled. Retrying 95
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/42NMDh8Hganeje5bMhvjS4QcWNU9WmDAv8hx2KbGq1Nj2iUgVmXFtVxyzXDz72h7Es6RXfvHCWTmLycxah6ioKPY
+Transaction not settled. Retrying 94
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/5KPUuSZEvaiRLnyCSTpFJMMZZoRrXainhtpgFwm8jPzTZx1B9d6FzcL2PCL91S4V5dx3Ss9M2hcuZGoQEPy99Q5X
+Transaction not settled. Retrying 93
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/2XeZtb3PSsJH7Q5YDokuckD1ui9Pj2PZUGe95NXQi9CZfCx8j4PFjk4XfMEKq7qy9oaL1uKRQCxGisAE2XZ7EWLx
+Transaction not settled. Retrying 92
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/2v8c9EayUG5uQfo4xrUCWHs2KwmVuGbGyH5kNx4FikpJsFxQiKsrQ6cj4ARj5ePDfoDQk4U14cQq43ms1imfJiBu
+Transaction not settled. Retrying 91
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/4LmVaBhvDScWYkAQbK8CAbfs7jGS8VoaMJTJJG8pbXesxVLmd3mxGH3qnFRW19r95r4vvDtdMxsCqVZoAXPJ8oas
+Transaction not settled. Retrying 90
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/r6jR4FeTxf5VeXruETQQNmuDmiRLkxkuQ34MgSQKFVo5ewh8P1aaBUtXJyEda4okKQJLvxC9DmwjyThx92pgzDY
+Transaction not settled. Retrying 89
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/xALuzrxyHiDSGtcciGHDKfrw48YsLDHnARp3HzQxc8zYTBg4Q9K93MiFvdM6vJGwfFS6pqQXBW8ZN6u7TPR5USj
+Transaction not settled. Retrying 88
+solana - Swapping 0.5 SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8) for SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+solana - Submitted transaction available at https://solana.fm/tx/Qdf7cSmeSh64ax4gHkseZG2dSju93fcm5KEdhzorbu6YPBig8kLpNQDnRQFTEdQtyzFNiLBB46GdBgGw5UmMEGA
+Keyboard interrupt detected. Stopping bot
+STARTING ARBITRAGE BOT
+*************************
+Initialized strategy.
+        Self Address: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Exchange 1: Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Exchange 2: Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Min Profit: 1.0
+        Execution Interval: 1
+        Execution Amount Token A: 0.5
+        Trading Address 1: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Trading Address 2: 7pgGEs1ozaPVxFgyo3oFvxzpKPf5kGEEwd9knM5X1X1M
+        Buy Bias: 0.0
+        Sell Bias: 0.0
+Delta is 2.30797%
+Keyboard interrupt detected. Stopping bot
+STARTING ARBITRAGE BOT
+*************************
+Initialized strategy.
+        Self Address: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Exchange 1: Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Exchange 2: Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Min Profit: 0.01
+        Execution Interval: 1
+        Execution Amount Token A: 1.0
+        Trading Address 1: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Trading Address 2: 7pgGEs1ozaPVxFgyo3oFvxzpKPf5kGEEwd9knM5X1X1M
+        Buy Bias: 0.0
+        Sell Bias: 0.0
+Delta is 4.74735%
+Profit 0.04747353999999988778601241098 is greater than min profit! Executing trade sell 1.0 @ 0.61772199999999999331379285649745725095272064208984375 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) and buy on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) @ 0.5897256364108252887125512513 with 0.6640962000259539 USDC
+USDC balance 250.0 on solana is available.
+AGENT balance 250.504544023678279742 on base is available.
+Profit 0.04727464999999995743842204132 is greater than min profit! Executing trade sell 1.0 @ 0.617604000000000041836756281554698944091796875 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) and buy on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) @ 0.5897249589684998743513758276 with 0.664030927432675 USDC
+USDC balance 250.0 on solana is available.
+AGENT balance 250.504544023678279742 on base is available.
+Selling on base
+Buying on 0.60 solana
+solana - Swapping 0.60366447948425 SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6) for SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+solana - Submitted transaction available at https://solana.fm/tx/4NTmCSskofBPGb8haau25VcmwKNYprs1Gbd8AUiEygGhaiDGah4gWfrpnjuRgwqCZZP5Kkg9ie1iLtJsfy9k8bx9
+base - Transaction hash of submitted tx: 0xddda89893374a497fce09109ef7ad8b5a57411ad03244696f30d5fa65c9ccf97
+base - Block explorer url: https://basescan.org/tx/0xddda89893374a497fce09109ef7ad8b5a57411ad03244696f30d5fa65c9ccf97
+base - Transaction hash: 0xddda89893374a497fce09109ef7ad8b5a57411ad03244696f30d5fa65c9ccf97
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0xddda89893374a497fce09109ef7ad8b5a57411ad03244696f30d5fa65c9ccf97
+base - Transaction successful!
+base - Transaction hash of submitted tx: 0xf4776b84b6f02cda7f35890b897cfe01fc4db502f1235c410b482261c3fa3ccb
+base - Block explorer url: https://basescan.org/tx/0xf4776b84b6f02cda7f35890b897cfe01fc4db502f1235c410b482261c3fa3ccb
+base - Transaction hash: 0xf4776b84b6f02cda7f35890b897cfe01fc4db502f1235c410b482261c3fa3ccb
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0xf4776b84b6f02cda7f35890b897cfe01fc4db502f1235c410b482261c3fa3ccb
+base - Transaction successful!
+base - Sending transaction {'from': '0x2066cc1D135A90362693B51D953522e61Ec7681e', 'to': '0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD', 'nonce': 5, 'gas': 1000000, 'gasPrice': 14651280, 'chainId': 8453, 'data': '0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000723ad17700000000000000000000000000000000000000000000000000000000000000020a080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001c00000000000000000000000000000000000000000000000000000000000000160000000000000000000000000d98832e8a59156acbee4744b9a94a9989a728f360000000000000000000000007fffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006a97407700000000000000000000000000000000000000000000000000000000000000000000000000000000000000003fc91a3afd70395cd496c647d5a6cc9d4b2b7fad00000000000000000000000000000000000000000000000000000000678082c700000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000004107bb0030e372904c0719cc6bef5f1828aac4ba79848045df88b26e87180c62820f8c75dead54a3a96416d08773a794111c95078593c3f94656b9811d18ba04351b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000000000000000000000000000000000000000000000000000000000000008f3e300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003000000000000000000000000d98832e8a59156acbee4744b9a94a9989a728f360000000000000000000000004200000000000000000000000000000000000006000000000000000000000000833589fcd6edb6e08f4c7c32d4f71b54bda02913'}
+base - Transaction hash of submitted tx: 0xbff778e1005604cf35b85801b942f755292272a64650c083818131f1a9fc1d2f
+base - Block explorer url: https://basescan.org/tx/0xbff778e1005604cf35b85801b942f755292272a64650c083818131f1a9fc1d2f
+base - Transaction hash: 0xbff778e1005604cf35b85801b942f755292272a64650c083818131f1a9fc1d2f
+base - Waiting for transaction to be mined
+base - Transaction mined successfully!
+base - Transaction successfully mined! 0xbff778e1005604cf35b85801b942f755292272a64650c083818131f1a9fc1d2f
+base - Transaction successful!
+STARTING ARBITRAGE BOT
+*************************
+Loading config from configs/agnt_usd_sol_base.json
+Checking for arbitrage opportunities
+Executing buys: True
+Executing sells: True
+Initialized strategy.
+        Self Address: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Exchange 1: Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Exchange 2: Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Min Profit: 0.01
+        Execution Interval: 1
+        Execution Amount Token A: 1.0
+        Trading Address 1: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Trading Address 2: 7pgGEs1ozaPVxFgyo3oFvxzpKPf5kGEEwd9knM5X1X1M
+        Buy Bias: 0.0
+        Sell Bias: 0.0
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 1
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        output:
+                            Amount: 0.617642
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        Rate: 0.617642
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 1
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        output:
+                            Amount: 0.591144
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        Rate: 1.6916
+Keyboard interrupt detected. Stopping bot
+solana - Swapping 0.60366447948425 SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6) for SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+solana - Submitted transaction available at https://solana.fm/tx/bQgMK1EMmYAx5LMXSgbm1oDz5pqeF3ziTTcoS2JqL3YxVkuJnTgGQSh9ATQPLojocKm3bTYHDUuuVjnNi3XXD8r
+solana - Swapping 0.60366447948425 SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6) for SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+solana - Submitted transaction available at https://solana.fm/tx/2KFdc9yb4Hz71QdshC75rviEcYwT4CEhLrCZjoYP7dJqSK8P8WsGckUBu9sFbdEqHEnpT8cHFmCpNrDTK2ygzwyk
+STARTING ARBITRAGE BOT
+*************************
+Loading config from configs/agnt_usd_sol_base.json
+Checking for arbitrage opportunities
+Executing buys: True
+Executing sells: True
+Initialized strategy.
+        Self Address: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Exchange 1: Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Exchange 2: Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+        Min Profit: 0.01
+        Execution Interval: 1
+        Execution Amount Token A: 1.0
+        Trading Address 1: 0x2066cc1D135A90362693B51D953522e61Ec7681e
+        Trading Address 2: 7pgGEs1ozaPVxFgyo3oFvxzpKPf5kGEEwd9knM5X1X1M
+        Buy Bias: 0.0
+        Sell Bias: 0.0
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 1
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        output:
+                            Amount: 0.61919
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        Rate: 0.619190
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 1
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        output:
+                            Amount: 0.591144
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        Rate: 1.6916
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.6191900000000000181543668987
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        output:
+                            Amount: 0.988248141798075334
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        Rate: 1.596034
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.6191900000000000181543668987
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        output:
+                            Amount: 1.04219595
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        Rate: 0.5941
+Bid Rates: {'base': Decimal('0.61919000000000001815436689867055974900722503662109375'), 'solana': Decimal('0.59114400000000000279243295153719373047351837158203125')}
+Ask Rates: {'base': Decimal('0.6265531639385733737916157474'), 'solana': Decimal('0.5941205202342227766585259258')}
+Best Bid: 0.61919000000000001815436689867055974900722503662109375 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Best Ask: 0.5941205202342227766585259258 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Profit: 4.21959%
+Delta is 4.21959%
+Profit 0.04219594999999998135579738973 is greater than min profit! Executing trade sell 1.0 @ 0.61919000000000001815436689867055974900722503662109375 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) and buy on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe) @ 0.5941205202342227766585259258 with 0.6673207861288225 USDC
+USDC balance 250.0 on solana is available.
+AGENT balance 249.504544023678279742 on base is available.
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 1
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        output:
+                            Amount: 0.619273
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        Rate: 0.619273
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 1
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        output:
+                            Amount: 0.591144
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        Rate: 1.6916
+
+                    uniswap_router Exchange;
+                        input:
+                            Amount: 0.6192729999999999623838675689
+                            Address: <USD Coin (USDC) at 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals, on chain 8453>
+                        output:
+                            Amount: 0.988048088036332101
+                            Address: <AgentAlgo (AGENT) at 0xD98832e8a59156AcBEe4744B9A94A9989a728f36, 18 decimals, on chain 8453>
+                        Rate: 1.595499
+
+                    Jupitar Exchange;
+                        input:
+                            Amount: 0.6192729999999999623838675689
+                            Address: SplToken(address='EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', symbol='USDC', decimals=6)
+                        output:
+                            Amount: 1.04233263
+                            Address: SplToken(address='BKgcrCw55yb1ocLS2MnQLT2dSkWtAPjxTanLoWB8oZso', symbol='AGENT', decimals=8)
+                        Rate: 0.5941
+Bid Rates: {'base': Decimal('0.6192729999999999623838675688602961599826812744140625'), 'solana': Decimal('0.59114400000000000279243295153719373047351837158203125')}
+Ask Rates: {'base': Decimal('0.6267630163940243213011835315'), 'solana': Decimal('0.5941222429158722096446043066')}
+Best Bid: 0.6192729999999999623838675688602961599826812744140625 on Exchange(name=UniswapRouterExchange rpc_url=https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Best Ask: 0.5941222429158722096446043066 on Exchange(name=JupitarExchange rpc_url=https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe)
+Profit: 4.23326%
+Keyboard interrupt detected. Stopping bot

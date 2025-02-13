@@ -1,0 +1,55 @@
+{{if .Values.reporting.enabled}}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "arbitrage.fullname" . }}-reporting
+  labels:
+    {{- include "arbitrage.labels" . | nindent 4 }}
+spec:
+  schedule: "{{ .Values.reporting.interval}}"
+  # we make sure to only run one instance of the job at a time and we never re-run it buy setting the concurrencyPolicy to Forbid 
+  concurrencyPolicy: Forbid
+  # we make sure that on error the job is not retried by setting the backoffLimit to 0
+
+  # we also make sure that we only keep the last successful job by setting the successfulJobsHistoryLimit to 1
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: reporting
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+            envFrom:
+            {{ if .Values.config.from_existing_config_map }}
+              - configMapRef:
+                  name: {{ .Values.config.config_map_name }}
+            {{- else }}
+              - configMapRef:
+                  name: {{ include "arbitrage.fullname" . }}
+            {{- end }}
+            env:
+                - name: SHEET_NAME
+                  value: {{ .Values.reporting.sheet_name}}
+                - name: DATABASE_URL
+                  value: {{ .Values.reporting.database_url}}
+
+            command: 
+            - "/opt/venv/bin/arb"
+            - "report"
+            - "--currencies"
+            - "{{ .Values.reporting.currencies }}"
+            - "--chains"
+            - "{{ .Values.reporting.chains }}"
+            - "--timeperiod"
+            - "{{ .Values.reporting.timeperiod }}"
+            - "--output"
+            - "database"
+            
+{{- end }}
+---

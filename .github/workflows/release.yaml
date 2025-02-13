@@ -1,0 +1,69 @@
+# Publish package on main branch if it's tagged with 'v*'
+
+name: release & publish workflow
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push events but only for the master branch
+  push:
+    tags:
+      - 'v*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "release"
+  release:
+    name: Create Release
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        python-versions: [3.8]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Get version from tag
+        id: tag_name
+        run: |
+          echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
+        shell: bash
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # git submodule update --init --recursive
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-versions }}
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - uses: yokawasa/action-setup-kube-tools@v0.9.2
+        with:
+          skaffold: '2.10.0'
+      - run: |
+          skaffold build --push=false
+
+      # run the built image
+      - name: Run the built image
+        run: |
+          export VERSION=${{ steps.tag_name.outputs.current_version}}
+          echo run the tests for $VERSION
+
+      - uses: yokawasa/action-setup-kube-tools@v0.9.2
+        with:
+          skaffold: '2.10.0'
+      - run: |
+
+          skaffold build

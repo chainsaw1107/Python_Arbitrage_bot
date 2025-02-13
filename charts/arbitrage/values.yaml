@@ -1,0 +1,117 @@
+# Default values for arbitrage.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 8ball030/olas-arbitrage
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "0.2.58"
+
+imagePullSecrets:
+  - name: regcred
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+config:
+  from_existing_config_map: true
+  config_map_name: "arb-configs"
+  env:
+    LOG_LEVEL: "CRITICAL"
+    ETHERSCAN_API_KEY: None
+    ZERION_API_KEY: None
+    ENVIROMENT: "prod"
+    MIN_PROFIT: "0.005"
+    ASYNC_EXECUTION: "true"
+    EXECUTION_AMOUNT_TOKEN_A: "50"
+    EXECUTION_INTERVAL: "10"
+
+  config_paths:
+    - gnosis-OLAS-USDC-optimism-OLAS-USDC
+
+  gsheet:
+    from_existing_secret: true
+    secret_name: "gsheet-config"
+
+reporting:
+  enabled: true
+  interval: "*/15 * * * *" # is every minute
+  timeperiod: 30
+  ttl: 300
+  chains: "ethereum,polygon,base,xdai,arbitrum,optimism"
+  currencies: "OLAS,DAI,wxDAI,USDC,USDT,WETH,ETH,WBTC,USDC.e"
+  sheet_name: "arb_tracking_dai"
+  # the access for a svc in another namespace is svc.namespace.svc.cluster.local
+  # so for the postgres-postgresql-ha-pgpool in the postgres namespace the url is postgres-postgresql-ha-pgpool.postgres.svc.cluster.local
+
+  database_url: "postgresql://postgres:password@postgres-postgresql-ha-pgpool.postgres:5432/postgres"
+
+
+
+
+resources: {}
+
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

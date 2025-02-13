@@ -1,0 +1,46 @@
+{
+    "exchange_1": {
+        "chain_id": 8453,
+        "chain_name": "base",
+        "exchange_type": "uniswap_router",
+        "rpc_url": "https://base-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe",
+        "block_explorer_url": "https://basescan.org",
+        "native_token_symbol": "ETH",
+        "token_a": "0x9aeb3ac3ca6c5a7df8147a4dfe08cbf49f6bfbbc",
+        "token_b": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "router_address": "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD",
+        "permit2_address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "v3_factory_address": "0x33128a8fC17869897dcE68Ed026d694621f6FDfD",
+        "v3_quoter_address": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+        "custom_smart_path_kwargs": {
+		"v2_router": "0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24",
+		"v2_factory": "0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6",
+		"v3_quoter": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+		"v3_factory": "0x33128a8fC17869897dcE68Ed026d694621f6FDfD",
+		"pivot_tokens": [
+			"0x4200000000000000000000000000000000000006", 
+			"0x9aeb3ac3ca6c5a7df8147a4dfe08cbf49f6bfbbc", 
+			"0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+		], 
+                "v3_pool_fees": [100, 500, 3000, 10000],
+		"rpc_endpoint": "https://base-rpc.publicnode.com",
+		"chain_id": 8453
+	}
+},
+    "exchange_2": {
+        "chain_name": "solana",
+        "exchange_type": "jupitar",
+        "rpc_url": "https://solana-mainnet.g.alchemy.com/v2/VRrDXKCFpr1KzMLSJounTHTrXLJ8FbBe",
+        "block_explorer_url": "https://solana.fm",
+        "native_token_symbol": "SOL",
+        "token_a": {
+            "address": "GCjgRyGCNA91cCGqBzMT31frXt2ofWcF89Jp8DS4b6pv",
+            "symbol": "WOLF"
+        },
+        "token_b": {
+            "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+            "symbol": "USDT"
+        }
+
+    }
+}

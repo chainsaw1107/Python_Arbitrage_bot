@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "aea-contracts-solana"
+version = "0.1.0"
+description = ""
+authors = ["8baller <tomrae030@hotmail.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.10"
+open-aea-ledger-solana = "^1.43.0.post2"
+open-aea-cli-ipfs = "^1.43.0.post2"
+open-autonomy = "^0.13.9.post1"
+rich = "^13.7.0"
+
+
+
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.2.1"
+black = "^23.11.0"
+isort = "^5.12.0"
+pylama = {extras = ["all"], version = "^8.4.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

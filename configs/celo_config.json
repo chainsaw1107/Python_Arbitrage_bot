@@ -1,0 +1,32 @@
+{
+    "exchange_1": {
+        "chain_id": 100,
+        "exchange_type": "balancer_optimised",
+        "chain_name": "gnosis",
+        "rpc_url": "http://gnosis.chains.wtf:8545",
+        "block_explorer_url": "https://gnosisscan.io",
+        "native_token_symbol": "XDAI",
+        "vault_address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+        "token_a": "0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f",
+        "token_b": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        "pool_id": "0x79c872ed3acb3fc5770dd8a0cd9cd5db3b3ac985000200000000000000000067"
+    },
+    "exchange_2": {
+        "chain_name": "ubeswap",
+        "exchange_type": "uniswap_router",
+        "chain_id": 42220,
+        "rpc_url": "https://forno.celo.org",
+        "block_explorer_url": "https://celoscan.io",
+        "native_token_symbol": "CELO",
+        "token_a": "0xaCFfAe8e57Ec6E394Eb1b41939A8CF7892DbDc51",
+        "token_b": "0x918146359264c492bd6934071c6bd31c854edbc3",
+        "router_address": "0x3C255DED9B25f0BFB4EF1D14234BD2514d7A7A0d",
+        "permit2_address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "custom_smart_path_kwargs": {"pivot_tokens": ["0x471EcE3750Da237f93B8E339c536989b8978a438", 
+"0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e", "0xcebA9300f2b948710d2653dD7B07f33A8B32118C"], 
+"v3_pool_fees": [100, 500, 3000, 10000], "v2_router": "0xE3D8bd6Aed4F159bc8000a9cD47CffDb95F96121", 
+"v2_factory": "0x62d5b84bE28a183aBB507E125B384122D2C25fAE", "v3_quoter": 
+"0x1f34a843832044A085bB9cAe48cc7294D5478FAA", "v3_factory": "0x67FEa58D5a5a4162cED847E13c2c81c73bf8aeC4", 
+"rpc_endpoint": "https://forno.celo.org", "chain_id": 42220}
+    }
+}
